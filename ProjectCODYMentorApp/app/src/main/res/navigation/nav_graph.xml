@@ -24,5 +24,39 @@
         android:id="@+id/firstPageFragment"
         android:name="com.example.projectcodymentorapp.FirstPageFragment"
         android:label="fragment_first_page"
-        tools:layout="@layout/fragment_first_page" />
+        tools:layout="@layout/fragment_first_page" >
+        <action
+            android:id="@+id/action_firstPageFragment_to_classesFragment"
+            app:destination="@id/classesFragment" />
+        <action
+            android:id="@+id/action_firstPageFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_firstPageFragment_to_studentsFragment"
+            app:destination="@id/studentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classesFragment"
+        android:name="com.example.projectcodymentorapp.ClassesFragment"
+        android:label="fragment_classes"
+        tools:layout="@layout/fragment_classes" >
+        <action
+            android:id="@+id/action_classesFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.projectcodymentorapp.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.example.projectcodymentorapp.StudentsFragment"
+        android:label="fragment_students"
+        tools:layout="@layout/fragment_students" >
+        <action
+            android:id="@+id/action_studentsFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_searchFragment" app:destination="@id/searchFragment" />
 </navigation>
