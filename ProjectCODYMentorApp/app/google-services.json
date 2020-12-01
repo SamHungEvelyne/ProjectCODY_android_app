@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "408878397438",
+    "firebase_url": "https://codyapp-150e5.firebaseio.com",
+    "project_id": "codyapp-150e5",
+    "storage_bucket": "codyapp-150e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408878397438:android:75dad53952890765d6f2af",
+        "android_client_info": {
+          "package_name": "com.example.projectcodymentorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408878397438-8rt8cvs7pi0e2cdkso2hn5bibg3qqqos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR3eJmUadIdXlkRPqjgayv9IQPKSWNxdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408878397438-8rt8cvs7pi0e2cdkso2hn5bibg3qqqos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
