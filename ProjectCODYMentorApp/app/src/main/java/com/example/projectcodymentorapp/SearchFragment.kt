@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_search.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,12 +26,16 @@ class SearchFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var viewManager: LinearLayoutManager
+    lateinit var viewAdapter: EntryRecyclerViewAdapter
+    val viewModel: EntryViewModel by activityViewModels<EntryViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -35,6 +45,27 @@ class SearchFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_search, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewManager = LinearLayoutManager(this.context)
+
+        val clickLambda: (Entry) -> Unit = {
+            viewModel.setCurrentEntry(it)
+        }
+        viewAdapter = EntryRecyclerViewAdapter(ArrayList(), clickLambda)
+        search_recycler?.apply {
+            layoutManager = viewManager
+            adapter = viewAdapter
+        }
+
+        viewModel.entryList.observe(viewLifecycleOwner, {
+            viewAdapter.entryList = it
+            viewAdapter.notifyDataSetChanged()
+
+        })
+
     }
 
     companion object {

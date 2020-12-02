@@ -2,4 +2,7 @@
     <string name="app_name">Project CODY Mentor App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="student_type">Student</string>
+    <string name="course_type">Course</string>
+    <string name="mentor_type">Mentor</string>
 </resources>
