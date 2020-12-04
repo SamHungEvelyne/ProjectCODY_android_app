@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menuHome"
+            android:icon="@drawable/ic_home_vect"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/menuPending"
+            android:icon="@drawable/ic_pending_vect"
+            android:title="@string/pending"/>
+        <item
+            android:id="@+id/menuClasses"
+            android:icon="@drawable/ic_classes_vector"
+            android:title="@string/classes"/>
+        <item
+            android:id="@+id/menuStudents"
+            android:icon="@drawable/ic_students_vector"
+            android:title="@string/students"/>
+
+        <item android:title="@string/others">
+
+            <menu android:title="@string/others">
+
+                <item
+                    android:id="@+id/menuStettings"
+                    android:icon="@drawable/ic_settings_vector"
+                    android:title="@string/settings" />
+
+                <item
+                    android:id="@+id/menuContactus"
+                    android:icon="@drawable/ic_contactus_vector"
+                    android:title="@string/contact_us"/>
+
+                <item
+                    android:id="@+id/menuAboutus"
+                    android:icon="@drawable/ic_aboutus_vector"
+                    android:title="@string/about_us"/>
+
+            </menu>
+        </item>
+
+    </group>
+</menu>

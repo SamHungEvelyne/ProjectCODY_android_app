@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/student_image"
+        android:layout_width="91dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/female" />
+
+    <TextView
+        android:id="@+id/name_student"
+        android:layout_width="216dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:hint="Logan Logan"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phone_text"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:hint="555-555-5555"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name_student"
+        app:layout_constraintTop_toBottomOf="@+id/name_student" />
+
+    <TextView
+        android:id="@+id/email_student"
+        android:layout_width="368dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:hint="Email"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+
+    <TextView
+        android:id="@+id/age_student"
+        android:layout_width="368dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:hint="Age"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_student" />
+
+    <TextView
+        android:id="@+id/sessions_student"
+        android:layout_width="368dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:hint="Sessions"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_student" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
