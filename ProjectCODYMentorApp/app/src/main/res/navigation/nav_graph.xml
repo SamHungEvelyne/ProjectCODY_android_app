@@ -3,60 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstPageFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
-        android:id="@+id/studentFragment"
-        android:name="com.example.projectcodymentorapp.StudentFragment"
-        android:label="fragment_student"
-        tools:layout="@layout/fragment_student" />
-    <fragment
-        android:id="@+id/courseFragment"
-        android:name="com.example.projectcodymentorapp.CourseFragment"
-        android:label="fragment_course"
-        tools:layout="@layout/fragment_course" />
-    <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.example.projectcodymentorapp.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
-    <fragment
-        android:id="@+id/firstPageFragment"
-        android:name="com.example.projectcodymentorapp.FirstPageFragment"
-        android:label="fragment_first_page"
-        tools:layout="@layout/fragment_first_page" >
+        android:id="@+id/signInFragment"
+        android:name="com.example.projectcodymentorapp.signInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
         <action
-            android:id="@+id/action_firstPageFragment_to_classesFragment"
-            app:destination="@id/classesFragment" />
-        <action
-            android:id="@+id/action_firstPageFragment_to_favouriteFragment"
-            app:destination="@id/favouriteFragment" />
-        <action
-            android:id="@+id/action_firstPageFragment_to_studentsFragment"
-            app:destination="@id/studentsFragment" />
+            android:id="@+id/action_signInFragment_to_menuHome"
+            app:destination="@id/menuHome" />
     </fragment>
     <fragment
-        android:id="@+id/classesFragment"
-        android:name="com.example.projectcodymentorapp.ClassesFragment"
-        android:label="fragment_classes"
-        tools:layout="@layout/fragment_classes" >
+        android:id="@+id/menuHome"
+        android:name="com.example.projectcodymentorapp.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_classesFragment_to_courseFragment"
-            app:destination="@id/courseFragment" />
+            android:id="@+id/action_menuHome_to_menuStudents"
+            app:destination="@id/menuStudents" />
+        <action
+            android:id="@+id/action_menuHome_to_menuClasses"
+            app:destination="@id/menuClasses" />
+        <action
+            android:id="@+id/action_menuHome_to_menuPending"
+            app:destination="@id/menuPending" />
     </fragment>
     <fragment
-        android:id="@+id/favouriteFragment"
-        android:name="com.example.projectcodymentorapp.FavouriteFragment"
-        android:label="fragment_favourite"
-        tools:layout="@layout/fragment_favourite" />
-    <fragment
-        android:id="@+id/studentsFragment"
-        android:name="com.example.projectcodymentorapp.StudentsFragment"
+        android:id="@+id/menuStudents"
+        android:name="com.example.projectcodymentorapp.studentsFragment"
         android:label="fragment_students"
         tools:layout="@layout/fragment_students" >
         <action
-            android:id="@+id/action_studentsFragment_to_studentFragment"
+            android:id="@+id/action_menuStudents_to_studentFragment"
             app:destination="@id/studentFragment" />
     </fragment>
-    <action android:id="@+id/action_global_searchFragment" app:destination="@id/searchFragment" />
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.projectcodymentorapp.studentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student" >
+        <action
+            android:id="@+id/action_studentFragment_to_enrolledCourseFragment"
+            app:destination="@id/enrolledCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enrolledCourseFragment"
+        android:name="com.example.projectcodymentorapp.enrolledCourseFragment"
+        android:label="fragment_enrolled_course"
+        tools:layout="@layout/fragment_enrolled_course" />
+    <fragment
+        android:id="@+id/menuClasses"
+        android:name="com.example.projectcodymentorapp.classesFragment"
+        android:label="fragment_classes"
+        tools:layout="@layout/fragment_classes" />
+    <fragment
+        android:id="@+id/menuPending"
+        android:name="com.example.projectcodymentorapp.PendingFragment"
+        android:label="fragment_pending"
+        tools:layout="@layout/fragment_pending" />
 </navigation>
