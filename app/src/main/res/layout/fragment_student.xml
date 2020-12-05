@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,8 +8,8 @@
 
     <ImageView
         android:id="@+id/student_img"
-        android:layout_width="222dp"
-        android:layout_height="226dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -19,42 +18,102 @@
         app:srcCompat="@drawable/female" />
 
     <TextView
-        android:id="@+id/name_text"
+        android:id="@+id/studentname_text"
         android:layout_width="331dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:text="Name"
-        android:textSize="36sp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|bottom"
+        android:hint="Name"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_img" />
 
     <TextView
-        android:id="@+id/phone_text"
-        android:layout_width="329dp"
+        android:id="@+id/parentphone_text"
+        android:layout_width="331dp"
         android:layout_height="37dp"
-        android:text="xxx-xxx-xxxx"
+        android:gravity="left|bottom"
+        android:hint="Parent phone"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/name_text"
-        app:layout_constraintTop_toBottomOf="@+id/name_text" />
+        app:layout_constraintStart_toStartOf="@+id/studentname_text"
+        app:layout_constraintTop_toBottomOf="@+id/studentname_text" />
 
     <TextView
-        android:id="@+id/email_text"
-        android:layout_width="328dp"
+        android:id="@+id/parentemail_text"
+        android:layout_width="331dp"
         android:layout_height="40dp"
-        android:text="Email"
+        android:gravity="left|bottom"
+        android:hint="Parent email"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/phone_text"
-        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+        app:layout_constraintStart_toStartOf="@+id/parentphone_text"
+        app:layout_constraintTop_toBottomOf="@+id/parentphone_text" />
 
     <TextView
-        android:id="@+id/address_text"
-        android:layout_width="289dp"
-        android:layout_height="150dp"
+        android:id="@+id/parentsignature_text"
+        android:layout_width="331dp"
+        android:layout_height="40dp"
+        android:gravity="left|bottom"
+        android:hint="Parent signature"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/parentemail_text"
+        app:layout_constraintTop_toBottomOf="@+id/parentemail_text" />
+
+    <TextView
+        android:id="@+id/age_text"
+        android:layout_width="331dp"
+        android:layout_height="40dp"
+        android:gravity="left|bottom"
+        android:hint="Age"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/parentsignature_text"
+        app:layout_constraintTop_toBottomOf="@+id/parentsignature_text" />
+
+    <TextView
+        android:id="@+id/backgroud_text"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:gravity="left|bottom"
+        android:hint="Programming backgroud"
         android:singleLine="false"
-        android:text="Address"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/email_text"
-        app:layout_constraintTop_toBottomOf="@+id/email_text" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/age_text"
+        app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+    <TextView
+    android:id="@+id/sessions_text"
+    android:layout_width="331dp"
+    android:layout_height="wrap_content"
+    android:gravity="left|bottom"
+    android:hint="Sessions"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/backgroud_text" />
+
+    <TextView
+        android:id="@+id/session1_text"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:gravity="left|bottom"
+        android:hint="Session 1 time"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sessions_text" />
+
+    <TextView
+        android:id="@+id/session2_text"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:gravity="left|bottom"
+        android:hint="Session 2 time"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/session1_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,54 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".enrolledCourseFragment">
 
-    <ImageView
-        android:id="@+id/course_img"
-        android:layout_width="222dp"
-        android:layout_height="226dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/coursevector" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/course_img"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginTop="36dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.497"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/coursevector" />-->
 
     <TextView
         android:id="@+id/name_text"
         android:layout_width="331dp"
-        android:layout_height="56dp"
+        android:layout_height="36dp"
         android:layout_marginTop="36dp"
-        android:text="Name"
-        android:textSize="36sp"
+        android:hint="Name"
+        android:textSize="26sp"
+        android:gravity="left|bottom"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/course_img" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/phone_text"
-        android:layout_width="329dp"
+        android:id="@+id/title_text"
+        android:layout_width="331dp"
         android:layout_height="37dp"
-        android:text="xxx-xxx-xxxx"
+        android:hint="Title"
         android:textSize="24sp"
+        android:gravity="left|bottom"
         app:layout_constraintStart_toStartOf="@+id/name_text"
         app:layout_constraintTop_toBottomOf="@+id/name_text" />
 
     <TextView
-        android:id="@+id/email_text"
-        android:layout_width="328dp"
+        android:id="@+id/mentor_text"
+        android:layout_width="331dp"
         android:layout_height="40dp"
-        android:text="Mentor"
+        android:hint="Mentor"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/phone_text"
-        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+        android:gravity="left|bottom"
+        app:layout_constraintStart_toStartOf="@+id/title_text"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
     <TextView
-        android:id="@+id/address_text"
-        android:layout_width="289dp"
-        android:layout_height="150dp"
+        android:id="@+id/cap_text"
+        android:layout_width="331dp"
+        android:layout_height="40dp"
+        android:hint="Cap"
+        android:textSize="24sp"
+        android:gravity="left|bottom"
+        app:layout_constraintStart_toStartOf="@+id/mentor_text"
+        app:layout_constraintTop_toBottomOf="@+id/mentor_text" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
         android:singleLine="false"
-        android:text="Description"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/email_text"
-        app:layout_constraintTop_toBottomOf="@+id/email_text" />
+        android:hint="Description"
+        android:textSize="24sp"
+        android:gravity="left|bottom"
+        app:layout_constraintStart_toStartOf="@+id/cap_text"
+        app:layout_constraintTop_toBottomOf="@+id/cap_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
