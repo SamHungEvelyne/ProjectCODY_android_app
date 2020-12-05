@@ -27,6 +27,7 @@ class CourseRecyclerViewAdapter  (var courseData: ArrayList<Course>)
 
     // lambda expression to trigger the method
     lateinit var clickLambda: (Course) -> Unit
+
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.bind(courseData[position], clickLambda)
 

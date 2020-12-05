@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_classes.*
 import kotlinx.android.synthetic.main.fragment_students.*
 
 
@@ -48,10 +49,12 @@ class classesFragment : Fragment() {
             findNavController().navigate(R.id.action_menuClasses_to_enrolledCourseFragment)
 
         }
+
         viewAdapter = CourseRecyclerViewAdapter(ArrayList())
+
         viewAdapter.clickLambda = clickLambda
 
-        students_recycler?.apply {
+        courses_recycler?.apply {
             layoutManager = viewManager
             adapter = viewAdapter
         }

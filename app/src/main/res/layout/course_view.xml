@@ -9,9 +9,10 @@
     <ImageView
         android:id="@+id/course_image"
         android:layout_width="91dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
+        android:translationY="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/coursevector" />
@@ -21,8 +22,9 @@
         android:layout_width="216dp"
         android:layout_height="39dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="16dp"
         android:hint="Course Name"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
@@ -31,11 +33,12 @@
 
     <TextView
         android:id="@+id/title_course"
-        android:layout_width="150dp"
-        android:layout_height="35dp"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:hint="Title"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/name_course"
@@ -43,11 +46,12 @@
 
     <TextView
         android:id="@+id/mentor_course"
-        android:layout_width="368dp"
+        android:layout_width="268dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:hint="Mentor"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +59,11 @@
 
     <TextView
         android:id="@+id/cap_course"
-        android:layout_width="368dp"
+        android:layout_width="268dp"
         android:layout_height="35dp"
         android:hint="Cap"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"

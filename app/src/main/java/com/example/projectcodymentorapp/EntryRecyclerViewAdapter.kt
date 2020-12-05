@@ -10,7 +10,7 @@ class EntryRecyclerViewAdapter(var entryList: ArrayList<Entry>, var clickLambda:
     RecyclerView.Adapter<EntryRecyclerViewAdapter.RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.card_template, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.student_view, parent, false)
         return RecyclerViewHolder(view)
     }
 
