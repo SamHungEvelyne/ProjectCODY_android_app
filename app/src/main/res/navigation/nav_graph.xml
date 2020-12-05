@@ -42,11 +42,7 @@
         android:id="@+id/studentFragment"
         android:name="com.example.projectcodymentorapp.studentFragment"
         android:label="fragment_student"
-        tools:layout="@layout/fragment_student" >
-        <action
-            android:id="@+id/action_studentFragment_to_enrolledCourseFragment"
-            app:destination="@id/enrolledCourseFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_student" />
     <fragment
         android:id="@+id/enrolledCourseFragment"
         android:name="com.example.projectcodymentorapp.enrolledCourseFragment"
@@ -56,7 +52,11 @@
         android:id="@+id/menuClasses"
         android:name="com.example.projectcodymentorapp.classesFragment"
         android:label="fragment_classes"
-        tools:layout="@layout/fragment_classes" />
+        tools:layout="@layout/fragment_classes" >
+        <action
+            android:id="@+id/action_menuClasses_to_enrolledCourseFragment"
+            app:destination="@id/enrolledCourseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuPending"
         android:name="com.example.projectcodymentorapp.PendingFragment"

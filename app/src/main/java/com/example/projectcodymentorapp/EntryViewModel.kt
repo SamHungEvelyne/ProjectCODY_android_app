@@ -34,6 +34,17 @@ class EntryViewModel : ViewModel(), ValueEventListener {
         return students
     }
 
+    fun getCourses(): ArrayList<Course> {
+        val courses = ArrayList<Course>()
+        entryList.value?.forEach {
+            if (it is Course) {
+                courses.add(it)
+            }
+        }
+        return courses
+    }
+
+
     fun setCurrentEntry(entry: Entry) {
         currentEntry.postValue(entry);
     }

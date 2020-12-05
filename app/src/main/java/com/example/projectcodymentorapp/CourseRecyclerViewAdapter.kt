@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CoureRecyclerViewAdapter  (var studentData: Array<Student>)
-    : RecyclerView.Adapter<CoureRecyclerViewAdapter.RecyclerViewHolder>() {
+class CourseRecyclerViewAdapter  (var courseData: ArrayList<Course>)
+    : RecyclerView.Adapter<CourseRecyclerViewAdapter.RecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // inflate means to convert code into visual components
@@ -22,27 +22,30 @@ class CoureRecyclerViewAdapter  (var studentData: Array<Student>)
 
     // returns size of arrayList of students
     override fun getItemCount(): Int {
-        return studentData.size
+        return courseData.size
     }
 
     // lambda expression to trigger the method
-    lateinit var clickLambda: (Student) -> Unit
+    lateinit var clickLambda: (Course) -> Unit
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
-        holder.bind(studentData[position], clickLambda)
+        holder.bind(courseData[position], clickLambda)
 
     }
 
     // A holder class for each item in the list
     class RecyclerViewHolder(val viewItem: View) : RecyclerView.ViewHolder(viewItem) {
 
-        fun bind(student: Student, clickLambda: (Student) -> Unit) {
-//            viewItem.findViewById<TextView>(R.id.name_text).text = student.name
-//            viewItem.findViewById<TextView>(R.id.phone_text).text = student.phone
+        fun bind(course: Course, clickLambda: (Course) -> Unit) {
+            viewItem.findViewById<TextView>(R.id.name_course).text = course.name
+            viewItem.findViewById<TextView>(R.id.title_course).text = course.title
+            viewItem.findViewById<TextView>(R.id.mentor_course).text = course.mentor
+            viewItem.findViewById<TextView>(R.id.cap_course).text = course.cap.toString()
+
             var img = viewItem.findViewById<ImageView>(R.id.course_image)
             img.setImageResource(R.drawable.coursevector)
 
             viewItem.setOnClickListener {
-                clickLambda (student)
+                clickLambda (course)
             }
         }
     }

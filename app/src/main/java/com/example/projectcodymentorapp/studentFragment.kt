@@ -5,11 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import kotlinx.android.synthetic.main.fragment_student.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -17,16 +15,26 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class studentFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    val viewModel: EntryViewModel by activityViewModels<EntryViewModel>()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        var student = viewModel.currentEntry.value as Student
+
+        studentname_text.text = student.first_name
+        parentemail_text.text = student.parent_email
+        parentphone_text.text = student.parent_phone
+        age_text.text = student.age_group
+        background_text.text = student.programming_background
+        sessions_text.text = student.sessions
     }
 
     override fun onCreateView(
@@ -50,10 +58,7 @@ class studentFragment : Fragment() {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             studentFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+
             }
     }
 }
